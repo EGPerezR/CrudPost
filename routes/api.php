@@ -24,3 +24,8 @@ Route::delete('publicacion/{id}', 'PublicacionController@delete');
 
 /*Comentarios*/
 
+Route::get('comentarios', 'ComentariosController@index');
+Route::post('comentarios', 'ComentariosController@store');
+Route::get('comentarios/{id}', 'ComentariosController@show');
+Route::put('comentarios/{id}', 'ComentariosController@update');
+Route::delete('comentarios/{id}', 'ComentariosController@delete');

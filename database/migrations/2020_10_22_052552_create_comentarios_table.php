@@ -16,10 +16,13 @@ class CreateComentariosTable extends Migration
         Schema::create('comentarios', function (Blueprint $table) {
             $table->increments('id');
             $table->string('estado_id');
-            $table->string('comentario');
+            $table->text('comentario');
             $table->timestamps();
 
-            $table->foreign('estado_id')->references('id')->on('publicacions');
+            $table->foreign('estado_id')
+                                ->references('id')->on('publicacions');
+
+           
         });
     }
 

@@ -17,6 +17,8 @@ class CreatePublicacionsTable extends Migration
             $table->increments('id');
             $table->text('estado');
             $table->timestamps();
+            $table->primary('id');
+            
         });
     }
 
