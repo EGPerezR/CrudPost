@@ -15,8 +15,12 @@ use App\publicacion;
 |
 */
 
+/*Publicaciones*/
 Route::get('publicacion', 'PublicacionController@index');
 Route::post('publicacion', 'PublicacionController@store');
 Route::get('publicacion/{id}', 'PublicacionController@show');
 Route::put('publicacion/{id}', 'PublicacionController@update');
 Route::delete('publicacion/{id}', 'PublicacionController@delete');
+
+/*Comentarios*/
+
