@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePublicacionsTable extends Migration
+class CreateMailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreatePublicacionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('publicacions', function (Blueprint $table) {
-            $table->increments('id');
-            $table->text('estado');
+        Schema::create('mails', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('nombre');
+            $table->string('correo');
+            $table->string('mensaje');
+            $table->file();
             $table->timestamps();
-            $table->primary('id');
-            
         });
     }
 
@@ -29,6 +30,6 @@ class CreatePublicacionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('publicacions');
+        Schema::dropIfExists('mails');
     }
 }

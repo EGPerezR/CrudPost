@@ -1,8 +1,6 @@
 <?php
 
-use App\publicacion;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::put('articles/{id}', function(Request $request, $id) {
-    $article = publicacion::findOrFail($id);
-    $article->update($request->all());
-
-    return $article;
+Route::get('/', function () {
+    return view('welcome');
 });

@@ -15,9 +15,9 @@ class PublicacionController extends Controller
     }
     public function store(Request $request)
     {
-        $article = publicacion::create($request->all());
+        $publicacion = publicacion::create($request->all());
 
-        return response()->json($article, 201);
+        return response()->json($publicacion, 201);
     }
     public function show(publicacion $id)
     {
